@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FaceBook</title>
+    <link rel="stylesheet" href="facebooklogin.css" />
+    <script>
+        function year(){
+            document.write("<option>연도<option>");
+            for(var i=1905;i<=2019;i++){
+                document.write("<option>"+i+"<option>");
+            }
+        }
+
+        function month(){
+            document.write("<option>"+"월"+"<option>");
+            for(var i=1;i<=12;i++){
+                document.write("<option>"+i+"월<option>");
+            }
+        }
+
+        function day(){
+            document.write("<option>"+"일"+"<option>");
+            for(var i=1;i<=31;i++){
+                document.write("<option>"+i+"일<option>");
+            }
+        }
+    </script>
+</head>
+<header>
+    <div id="header-menu">
+        <div id="facebook">facebook</div>
+        <div class="id_pw_login-button">
+            <div id="id" class="input-border">
+                이메일 또는 휴대폰
+                <input type="text" />
+            </div>
+            <div id="pw" class="input-border">
+                비밀번호
+                <input type="password" />
+                <span style="color: #9cb4d8;font-size: 13.2px;">계정을 잊으셨나요?</span>
+            </div>
+            <input id="login-button" type="submit" value="로그인" />
+        </div>
+    </div>
+</header>
+
+<body>
+    <div id="bd" style="height: 625px;">
+        <div id="bd_contents" style="width: 1090px;height: 580px;
+        margin: 0 auto;">
+            <div id="bd_left" style="display:inline-block;">
+                <div id="left_contents">
+                    <div id="advice">Facebook에서 전세계에 있는 친구, 가족, 지인들과<br> 함께 이야기를 나눠보세요.</div>
+                    <div style="display:inline-block;"><img src="https://static.xx.fbcdn.net/rsrc.php/v3/yn/r/099etSefEv-.png"
+                            style="width: 554px; height: 211px;"></div>
+                </div>
+            </div>
+            <div id="bd_right" style="display:inline-block;">
+                <div id="right_contents" style="display:inline-block;">
+                    <h1>가입하기</h1>
+                    <h2>항상 지금처럼 무료로 즐기실 수 있습니다.</h2>
+                    <div style="display:inline-block;">
+                        <div class="name _input" style="display:inline-block; margin-right: 8px;"><input type="text"
+                                placeholder="성(姓)"></div>
+                        <div class="name _input" style="display:inline-block;"><input type="text" placeholder="이름(성은 제외)"></div>
+                    </div>
+                    <div class=" _input" id="phone_email"><input type="text" placeholder="휴대폰 번호 또는 이메일"></div>
+                    <div class="_input" id="password"><input type="password" placeholder="새 비밀번호"></div>
+                    <div id="_birth">생일</div>
+                    <select id="birth_year" class="select_box">
+                        <script>
+                            year();
+                        </script>
+                    </select>
+                    <select id="birth_month" class="select_box">
+                        <script>
+                            month();
+                        </script>
+                    </select>
+                    <select id="birth_day" class="select_box">
+                        <script>
+                            day();
+                        </script>
+                    </select>
+                <div id="birth_advice" style="font-size:13px;">왜 생년월일을 입력해야 하나요?</div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<footer>
+
+</footer>
+
+</html>
