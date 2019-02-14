@@ -10,7 +10,7 @@ body {
 
 header {
     height: 92px;
-    background-color: #3b5998;
+    background-image: linear-gradient(#4e69a2, #3b5998 50%);
 }
 
 #header-menu {
@@ -70,32 +70,30 @@ header {
     margin-left: 40px;
     margin-top: 26px;
     float: inherit;
-    padding: 2.5px;
-    border: 1px solid navy;
-    border-radius: 2px;
-    background-color: transparent;
+    padding: 3px 7px;
+    background-color: #4267b2;
+    border: 1px solid #29487d;
     color: #fff;
+    border-radius: 2px;
     font-size: 13px;
     font-weight: bold;
-    border: 0.5px solid;
     cursor: pointer;
     transition: 0.5s;
 }
 
 #login-button:hover {
-    background-color: transparent;
+    background-color: #365899;
+    border-color: #29487d;
 }
 #bd {
     height: 625px;
-    background:linear-gradient(#fff,#D3D8E8)
+    background:linear-gradient(#fff,#D3D8E8);
 }
 #bd_contents {
     width: 980px;
     margin: 0 auto;
 }
-#bd_left {
-    
-}
+
 #bd_right {
     vertical-align: top;
     float: right;
@@ -108,12 +106,10 @@ header {
     margin-top: 40px;
 }
 
-#left_contents {
-
-}
 
 #right_contents {
     height: 573px;
+    margin-right: 15px;
 }
 
 h1 {
