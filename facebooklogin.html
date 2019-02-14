@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!--코드가 많이 더러워요 -->
-<html> 
+<html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,23 +10,23 @@
     <link rel="stylesheet" href="facebooklogin.css" />
     <script>
         function year(){
-            document.write("<option>연도<option>");
-            for(var i=1905;i<=2019;i++){
-                document.write("<option>"+i+"<option>");
+            document.write("<option>연도</option>");
+            for(var i=2019;i>=1905;i--){
+                document.write("<option>"+i+"</option>");
             }
         }
 
         function month(){
-            document.write("<option>"+"월"+"<option>");
+            document.write("<option>"+"월"+"</>");
             for(var i=1;i<=12;i++){
-                document.write("<option>"+i+"월<option>");
+                document.write("<option>"+i+"월</option>");
             }
         }
 
         function day(){
-            document.write("<option>"+"일"+"<option>");
+            document.write("<option>"+"일"+"</option>");
             for(var i=1;i<=31;i++){
-                document.write("<option>"+i+"일<option>");
+                document.write("<option>"+i+"일</option>");
             }
         }
     </script>
@@ -41,7 +42,7 @@
             <div id="pw" class="input-border">
                 비밀번호
                 <input type="password" />
-                <span style="color: #9cb4d8;font-size: 13.2px;">계정을 잊으셨나요?</span>
+                <span id="_ID">계정을 잊으셨나요?</span>
             </div>
             <input id="login-button" type="submit" value="로그인" />
         </div>
@@ -71,25 +72,37 @@
                     <div class=" _input" id="phone_email"><input type="text" placeholder="휴대폰 번호 또는 이메일"></div>
                     <div class="_input" id="password"><input type="password" placeholder="새 비밀번호"></div>
                     <div id="_birth">생일</div>
-                    <select id="birth_year" class="select_box">
-                        <script>
-                            year();
-                        </script>
-                    </select>
-                    <select id="birth_month" class="select_box">
-                        <script>
-                            month();
-                        </script>
-                    </select>
-                    <select id="birth_day" class="select_box">
-                        <script>
-                            day();
-                        </script>
-                    </select>
-                <div id="birth_advice" style="font-size:13px;">왜 생년월일을 입력해야 하나요?</div>
+                    <div id="wrapper_va" style="margin-top: 11px;">
+                        <select id="birth_year" class="select_box">
+                            <script>
+                                year();
+                            </script>
+                        </select>
+                        <select id="birth_month" class="select_box">
+                            <script>
+                                month();
+                            </script>
+                        </select>
+                        <select id="birth_day" class="select_box">
+                            <script>
+                                day();
+                            </script>
+                        </select>
+                        <div id="birth_advice" style="font-size:13px;display: inline-block;">왜 생년월일을 입력해야 하나요?</div>
+                    </div>
+                    <div id="gender">
+                        <div id="girl" class="_gender" style="margin-right: 15px;"><input type="radio" name="gender">여성</div>
+                        <div id="boy" class="_gender"><input type="radio" name="gender">남성</div>
+                    </div>
+                    <div id="explanation">가입하기 버튼을 클릭하면 Facebook의 <span class="_explanation">약관</span>,<span class="_explanation">데이터 정책</span> 및 
+                            <span class="_explanation">쿠<br>키정책</span>에 동의하게 됩니다. 
+                            Facebook으로부터 SMS알림을 받<br>을 수 있으며 알림은 언제든지 옵트 아웃할 수 있습니다.
+                    </div>
+                    <div id="join_button"><input type="submit" value="가입하기"></div>
+                    <div id="make">유명인, 밴드, 비즈니스를 위한 <span id="_make">페이지 만들기</span></span>
+                </div>
             </div>
         </div>
-    </div>
     </div>
 </body>
 <footer>
